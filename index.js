@@ -1,7 +1,7 @@
 function executeWithRandomDelay(taskName, callback) {
     // Convert minutes to milliseconds
-    const minTime = 9 * 60 * 1000; // 9 minutes in ms
-    const maxTime = 14 * 60 * 1000; // 14 minutes in ms
+    const minTime = 3 * 60 * 1000; // 9 minutes in ms
+    const maxTime = 5 * 60 * 1000; // 14 minutes in ms
 
     // Generate a random delay between 9 and 14 minutes
     const delay = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
