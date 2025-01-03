@@ -41,14 +41,7 @@ pipeline {
         // }
     }
         post {
-            success {
-                echo 'The automation finished successfully.'
-            }
-
-            failure {
-                echo 'Something went wrong.'
-            }
-
+            
                 always{
                     sh 'npm run report:history && npm run report.ci'
                 script {
