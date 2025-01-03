@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@wdio/allure-reporter": "^8.40.3",
     "allure-commandline": "^2.13.8"
   }
 }

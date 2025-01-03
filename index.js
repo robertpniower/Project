@@ -1,3 +1,5 @@
+const allureReporter = require("@wdio/allure-reporter").default;
+
 function executeWithRandomDelay(taskName,callback, min, max) {
     // Convert minutes to milliseconds
     const minTime = min * 60 * 1000; // 9 minutes in ms
