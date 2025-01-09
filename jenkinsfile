@@ -25,26 +25,12 @@ pipeline {
                 sh 'npm run teststage'
             }
         }
-          // stage('Generating Test Reports...') {
-        //     steps {
-        //     sh 'npm run report:history && npm run report.ci'
-        //     script {
-        //             allure([
-        //                     includeProperties: false,
-        //                     jdk: '',
-        //                     properties: [],
-        //                     reportBuildPolicy: 'ALWAYS',
-        //                     results: [[path: 'target/allure-results']]
-        //             ])
-        //     }   
-        //     }
-        // }
-    }
-        post {
-            
-                always{
-                    sh 'npm run post'
-                
+          stage('Generating Test Reports...') {
+            steps {
+            sh 'npm run post'
+           
             }
         }
+    }
+       
     }
