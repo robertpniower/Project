@@ -8,7 +8,7 @@
     "teststage": "node ./stages/test.js",
     "build": "node ./stages/build.js",
     "post": "/stages/post.js",
-    "report": "node /stages/post.js",
+    "report": "node ./stages/post.js",
     "report:history": "mkdir -p allure-report/history && cp -a allure-results/* allure-report/history",
     "report.ci": "allure generate --clean -o allure-report",
     "test": "echo \"Error: no test specified\" && exit 1"
