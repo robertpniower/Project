@@ -15,14 +15,14 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 sh 'node --version'
-                sh 'npm install'
+                sh 'npm run build'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Starting Test Automation Suites...'
-                sh 'npm run start'
+                sh 'npm run teststage'
             }
         }
           // stage('Generating Test Reports...') {
@@ -43,16 +43,8 @@ pipeline {
         post {
             
                 always{
-                    sh 'npm run report:history && npm run report.ci'
-                script {
-                            allure([
-                                    includeProperties: false,
-                                    jdk: '',
-                                    properties: [],
-                                    reportBuildPolicy: 'ALWAYS',
-                                    results: [[path: 'target/allure-results']]
-                            ])
-                    }
+                    sh 'npm run post'
+                
             }
         }
     }
