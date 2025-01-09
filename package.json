@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start" : "node index.js",
-    "teststage": "node /stages/test.js",
-    "build": "node /stages/build.js",
+    "teststage": "node ./stages/test.js",
+    "build": "node ./stages/build.js",
     "post": "/stages/post.js",
     "report": "node /stages/post.js",
     "report:history": "mkdir -p allure-report/history && cp -a allure-results/* allure-report/history",
